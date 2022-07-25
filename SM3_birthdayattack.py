@@ -109,15 +109,15 @@ def randomnum(n):
 
 def brithday_attack():
     random_value = []
-    r = randomnum(pow(2,17))
-    for i in range(pow(2,17)):
+    r = randomnum(pow(2,16))
+    for i in range(pow(2,16)):
         m = padding(str(r[i]))
         M = block(m)
         Mn = SM3(M)
         tmp=""
         for k in Mn:
             tmp += hex(k)[2:]
-        random_value.append(tmp[:8])#tmp[:n] -> SM3算法输出 n*4 比特
+        random_value.append(tmp[:7])#tmp[:n] -> SM3算法输出 n*4 比特
 
     collision = dict(Counter(random_value))
     for key,value in collision.items():
