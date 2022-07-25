@@ -28,3 +28,10 @@ git账户名称：baekhunee
 
 ### 28bit
 <img width="406" alt="28bit" src="https://user-images.githubusercontent.com/105578152/180736716-6e68b473-3cfb-480c-b069-511593591bf9.png">
+
+# Rho攻击
+
+将所有生成的hash值放入一条链中。随机生成字符串r，调用自定义的SM3函数计算哈希值，如果当前哈希值已经在链中，说明此时已经成环，找到了碰撞；如果当前哈希值不在链中，就将其添入。
+
+## 运行截图
+![image](https://user-images.githubusercontent.com/105578152/180743746-7357324f-00a4-4bc4-a34c-5d260aa043fb.png)
